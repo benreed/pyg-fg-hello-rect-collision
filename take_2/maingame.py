@@ -47,6 +47,9 @@ class App:
         self.test_stage = PlayStage(TESTSTAGE, self.player)
         self.stage_list.append(self.test_stage)
         self.current_stage = self.stage_list[self.stage_index]
+
+        # Give test player a reference to the current stage
+        self.player.stage = self.current_stage
 		
     def event_loop(self):
         """
